@@ -3,14 +3,10 @@ package com.example.demo.model;
 import lombok.Data;
 
 import javax.persistence.*;
+import javax.validation.constraints.Pattern;
+import java.lang.annotation.Target;
 import java.util.Set;
 
-/**
- * Simple JavaBean domain object that represents a User.
- *
- * @author Eugene Suleimanov
- * @version 1.0
- */
 
 @Entity
 @Table(name = "users")
@@ -22,6 +18,7 @@ public class User {
     private Long id;
 
     @Column(name = "username")
+    @Pattern(regexp = "^[a-zA-Z][a-zA-Z0-9-_\\.]{1,20}$")
     private String username;
 
     @Column(name = "password")

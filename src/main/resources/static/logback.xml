@@ -7,7 +7,7 @@
         </encoder>
     </appender>
 
-    <logger name="chating">
+    <logger name="chatting">
         <level value="debug"/>
     </logger>
 
