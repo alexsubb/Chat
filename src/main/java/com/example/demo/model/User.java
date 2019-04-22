@@ -4,6 +4,7 @@ import lombok.Data;
 
 import javax.persistence.*;
 import javax.validation.constraints.Pattern;
+import java.beans.Transient;
 import java.lang.annotation.Target;
 import java.util.Set;
 
@@ -24,7 +25,6 @@ public class User {
     @Column(name = "password")
     private String password;
 
-    @Transient
     private String confirmPassword;
 
     @ManyToMany
